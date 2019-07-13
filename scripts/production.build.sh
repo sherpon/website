@@ -7,6 +7,4 @@ echo "Start build for production";
 
 webpack --mode production \
   --env.ENVIRONMENT=production \
-  --env.ENV_FILE_PATH=$PWD/env/production.env \
-  --env.FIREBASE_CONFIG_PATH=$PWD/env/production.firebaseConfig.json \
-  --env.PLANS_JSON_PATH=$PWD/env/production.plans.json
+  --env.ENV_FILE_PATH=$PWD/env/production.env 

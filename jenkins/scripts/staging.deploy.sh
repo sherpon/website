@@ -4,4 +4,4 @@ echo "Installing firebase-tools":
 npm install -g firebase-tools
 
 echo "Deploying to staging":
-firebase deploy --only hosting:admin -P staging --token $FIREBASE_DEPLOY_TOKEN
+firebase deploy --only hosting:website -P staging --token $FIREBASE_DEPLOY_TOKEN

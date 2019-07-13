@@ -1,0 +1,12 @@
+{
+  "EN": {
+    "titleLabel":"Create your awesome website now",
+    "descriptionLabel":"Sherpon is a modern platform made to make easy the way to create a website",
+    "signupButton":"Sign up now"
+  },
+  "ES": {
+    "titleLabel":"Crea tu increíble sitio web ahora",
+    "descriptionLabel":"Sherpon es una plataforma moderna hecha para facilitar la manera de crear un sitio web",
+    "signupButton":"Regístrate ahora"
+  }
+}
