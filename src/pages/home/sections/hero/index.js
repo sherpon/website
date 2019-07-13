@@ -36,6 +36,7 @@ class HeroContainer extends React.Component {
   }
 
   render() {
+    const {language} = this.props;
     return(
       <div className="hero-container-section">
         <Controller>
@@ -45,7 +46,9 @@ class HeroContainer extends React.Component {
             pin={'#hero-section'}
           >
             {(progress) => (
-              <Hero>
+              <Hero
+                strings={strings[language]}
+              >
                 <Timeline 
                   totalProgress={progress} 
                   paused
@@ -117,10 +120,14 @@ class HeroContainer extends React.Component {
   }
 }
 
-HeroContainer.propTypes = {};
+HeroContainer.propTypes = {
+  language: PropTypes.string.isRequired,
+};
 
-const mapStateToProps = () => ({});
+const mapStateToProps = (state) => ({
+  language: state.language,
+});
 
-const mapDispatchToProps = () => ({});
+const mapDispatchToProps = (dispatch) => ({});
 
 export default connect(mapStateToProps, mapDispatchToProps)(HeroContainer);

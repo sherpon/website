@@ -14,7 +14,7 @@ import PropTypes from 'prop-types';
 import isotype from './images/isotype-outwhite.svg';
 /** strings */
 
-const Hero = ({children}) => {
+const Hero = ({children, strings}) => {
   return(
     <div id="hero-section" className="hero-section">
       <div className="hero-section__hero">
@@ -23,15 +23,15 @@ const Hero = ({children}) => {
           <div>Sherpon</div>
         </div>
         <div className="hero-section__hero__title">
-          Create your awesome website now
+          {strings.titleLabel}
         </div>
         <div className="hero-section__hero__description">
-          Sherpon is a modern platform made to make easy the way to create a website
+          {strings.descriptionLabel}
         </div>
         <div className="hero-section__hero__action">
           <div className="hero-button-container">
             <div className="hero-button">
-              Sign up now
+              {strings.signupButton}
             </div>
           </div>
         </div>
