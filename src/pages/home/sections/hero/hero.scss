@@ -13,6 +13,17 @@
   .animation {
     position: absolute;
   }
+
+  .animation__editor {
+    position: absolute;
+    right: 0px;
+    transform: rotateY(-50deg) rotateX(20deg);
+
+    > img {
+      margin-left: 10%;
+      width: 80%;
+    }
+  }
 }
 
 .hero-section {
@@ -149,5 +160,8 @@
   &__animation {
     grid-area: animation;
     position: relative;
+    perspective: 700px;
+    perspective-origin: center;
+    transform-style: preserve-3d;
   }
 }

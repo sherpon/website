@@ -16,6 +16,7 @@ import Hero from './hero.jsx';
 /** styles */
 import './hero.scss';
 /** files */
+import editorPicture from './images/editor-transparent.png';
 /** strings */
 import strings from './hero.strings.json';
 
@@ -34,36 +35,37 @@ class HeroContainer extends React.Component {
         <Controller>
           <Scene
             triggerHook="onLeave"
-            duration={1001}
+            duration={2500}
             pin={'#hero-section'}
             pinSettings={true}
           >
             {(progress) => (
               <Hero>
-                <Timeline totalProgress={progress} paused>
-                  <Tween
-                      from={{ left: '10%', top: '60%' }}
-                      to={{ left: '60%', top: '10%' }}
-                  >
-                    <div className="animation">
-                      holiiiiiiii              
+                <Timeline 
+                  totalProgress={progress} 
+                  paused
+                  target={
+                    <div className="animation__editor">
+                      <img src={editorPicture}/>
+                      <Timeline totalProgress={progress} paused>
+                        <Tween
+                            from={{ left: '10%', top: '60%' }}
+                            to={{ left: '60%', top: '10%' }}
+                        >
+                          <div className="animation">
+                            holiiiiiiii              
+                          </div>
+                        </Tween>
+                      </Timeline>
                     </div>
-                  </Tween>
-                  <Timeline 
-                    target={
-                      <div className="heading">
-                        <h2>This is a cool heading</h2>
-                      </div>
-                    }
-                  >
-                    <Tween
-                      from={{ opacity: 0 }}
-                      to={{ opacity: 1 }}
-                    />
-                    <Tween
-                      to={{ x: '110%' }}
-                    />
-                  </Timeline>
+                  }
+                >
+                  <Tween
+                    duration={5}
+                  />
+                  <Tween
+                    to={{css: { transform: 'rotateY(0deg) rotateX(0deg)' }}}
+                  />
                 </Timeline>
               </Hero>
             )}
