@@ -1,27 +1,39 @@
 .hero-container-section {
-  padding: 3rem;
-  background: linear-gradient(199.95deg, #766AFA 8.58%, #5851EA 100%);
+  padding: 3rem 3rem 0rem 3rem;
+  //background: linear-gradient(199.95deg, #766AFA 8.58%, #5851EA 100%);
+  background: linear-gradient(187.29deg, #766AFA 8.58%, #5851EA 25.67%, #2F2F2F 99.52%);
 
   @media(min-width: 750px) {
-    padding: 4.5rem;
+    padding: 4.5rem 4.5rem 0rem 4.5rem;
   }
 
   @media(min-width: 1200px) {
-    padding: 9.5rem;
-  }
-
-  .animation {
-    position: absolute;
+    padding: 9.5rem 9.5rem 0rem 9.5rem;
   }
 
   .animation__editor {
     position: absolute;
-    right: 0px;
-    transform: rotateY(-50deg) rotateX(20deg);
+    transform: rotateY(-20deg) rotateX(40deg);
+    width: 226px;
+    height: 170px;
 
-    > img {
-      margin-left: 10%;
-      width: 80%;
+    @media(min-width: 750px) {
+      width: 278px;
+      height: 209px;
+    }
+  
+    @media(min-width: 1200px) {
+      width: 624px;
+      height: 468px;
+    }
+  
+    &__wrapper {
+      position: relative;
+      height: 100%;
+
+      > img {
+        position: absolute;
+      }
     }
   }
 }
@@ -30,7 +42,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto 300px;
   grid-template-areas: 
     "hero"
     "animation";
@@ -125,7 +137,7 @@
 
     &__action {
       height: 4.5rem;
-      margin-bottom: 6rem;
+      // margin-bottom: 6rem;
 
       @media(min-width: 750px) {}
     
@@ -160,8 +172,18 @@
   &__animation {
     grid-area: animation;
     position: relative;
-    perspective: 700px;
-    perspective-origin: center;
-    transform-style: preserve-3d;
+    perspective: 1500px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // perspective-origin: right top;
+    // transform-style: preserve-3d;
+
+    @media(min-width: 750px) {
+      // margin-top: 9rem;
+    }
+    
+    @media(min-width: 1200px) {}
   }
 }
