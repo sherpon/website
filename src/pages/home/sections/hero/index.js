@@ -10,34 +10,36 @@ import PropTypes from 'prop-types';
 /** utils */
 /** modules */
 /** components */
+import Hero from './hero.jsx';
 /** containers */
-import Hero from './sections/hero';
 /** styles */
+import './hero.scss';
 /** files */
 /** strings */
+import strings from './hero.strings.json';
 
 /**
- * Home container
+ * Hero container
  */
 
-class HomeContainer extends React.Component {
+class HeroContainer extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
     return(
-      <div className="home-container-page">
+      <div className="hero-container-section">
         <Hero/>
       </div>
     );
   }
 }
 
-HomeContainer.propTypes = {};
+HeroContainer.propTypes = {};
 
 const mapStateToProps = () => ({});
 
 const mapDispatchToProps = () => ({});
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(HeroContainer);
