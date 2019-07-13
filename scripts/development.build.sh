@@ -7,6 +7,4 @@ echo "Start build for development";
 
 webpack --mode development \
   --env.ENVIRONMENT=development \
-  --env.ENV_FILE_PATH=$PWD/env/development.env \
-  --env.FIREBASE_CONFIG_PATH=$PWD/env/development.firebaseConfig.json \
-  --env.PLANS_JSON_PATH=$PWD/env/development.plans.json
+  --env.ENV_FILE_PATH=$PWD/env/development.env

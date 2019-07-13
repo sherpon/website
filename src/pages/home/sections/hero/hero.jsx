@@ -14,9 +14,9 @@ import PropTypes from 'prop-types';
 import isotype from './images/isotype-outwhite.svg';
 /** strings */
 
-const Hero = ({}) => {
+const Hero = ({children}) => {
   return(
-    <div className="hero-section">
+    <div id="hero-section" className="hero-section">
       <div className="hero-section__hero">
         <div className="hero-section__hero__logo">
           <img src={isotype}/>
@@ -36,7 +36,9 @@ const Hero = ({}) => {
           </div>
         </div>
       </div>
-      <div className="hero-section__animation"></div>
+      <div className="hero-section__animation">
+        {children}
+      </div>
     </div>
   );
 };

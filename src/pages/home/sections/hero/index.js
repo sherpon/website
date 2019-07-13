@@ -2,7 +2,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-
+import { Controller, Scene } from 'react-scrollmagic';
+import { Tween, Timeline } from 'react-gsap';
 /** constants */
 /** actions */
 /** apis */
@@ -30,7 +31,45 @@ class HeroContainer extends React.Component {
   render() {
     return(
       <div className="hero-container-section">
-        <Hero/>
+        <Controller>
+          <Scene
+            triggerHook="onLeave"
+            duration={1001}
+            pin={'#hero-section'}
+            pinSettings={true}
+          >
+            {(progress) => (
+              <Hero>
+                <Timeline totalProgress={progress} paused>
+                  <Tween
+                      from={{ left: '10%', top: '60%' }}
+                      to={{ left: '60%', top: '10%' }}
+                  >
+                    <div className="animation">
+                      holiiiiiiii              
+                    </div>
+                  </Tween>
+                  <Timeline 
+                    target={
+                      <div className="heading">
+                        <h2>This is a cool heading</h2>
+                      </div>
+                    }
+                  >
+                    <Tween
+                      from={{ opacity: 0 }}
+                      to={{ opacity: 1 }}
+                    />
+                    <Tween
+                      to={{ x: '110%' }}
+                    />
+                  </Timeline>
+                </Timeline>
+              </Hero>
+            )}
+          </Scene>
+        </Controller>
+        
       </div>
     );
   }

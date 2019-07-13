@@ -4,4 +4,4 @@ echo "Installing firebase-tools":
 npm install -g firebase-tools
 
 echo "Deploying to production":
-firebase deploy --only hosting:admin -P production --token $FIREBASE_DEPLOY_TOKEN
+firebase deploy --only hosting:website -P production --token $FIREBASE_DEPLOY_TOKEN
