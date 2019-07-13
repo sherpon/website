@@ -8,7 +8,7 @@ pipeline {
   environment {
     CI = 'true'
     FIREBASE_DEPLOY_TOKEN = credentials('firebase-deploy-token')
-    ADMIN_PRODUCTION_ENV = credentials('admin-production-env')
+    SHERPON_WEBSITE_PRODUCTION_ENV = credentials('sherpon-website-production-env')
   }
   stages {
     stage('Install') {
