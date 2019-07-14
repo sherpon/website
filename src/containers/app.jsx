@@ -16,6 +16,7 @@ import { Router as BrowserRouter, Route, Switch /*, withRouter */ } from 'react-
 import history from '../modules/history';
 import reducer from '../reducers'
 /** components */
+import Language from '../components/language';
 /** containers */
 import Home from '../pages/home';
 /** styles */
@@ -52,6 +53,7 @@ const App = () => {
           <Route exact path="/" component={Home} />
         </Switch>
       </BrowserRouter>
+      <Language/>
     </Provider>
   )
 };
