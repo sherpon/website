@@ -16,7 +16,7 @@ import Hero from './hero.jsx';
 /** styles */
 import './hero.scss';
 /** files */
-import airportNightPicture from './images/airport-night.jpg';
+import airportNightPicture from './images/airport-night-opt.webp';
 import ideaComPicture from './images/idea.com.svg';
 import yourPicture from './images/YOUR.svg';
 import ideaPicture from './images/IDEA.svg';
@@ -60,43 +60,43 @@ class HeroContainer extends React.Component {
                               from={{ opacity: 0, right: '-110%' }}
                               to={{ opacity: 1, right: '0%' }}
                           >
-                            <img src={airportNightPicture} style={{ width: '100%' }}/>
+                            <img src={airportNightPicture} alt="sherpon-airport-night" style={{ width: '100%' }}/>
                           </Tween>
                           <Tween
                               from={{ opacity: 0, top: '-60%' }}
                               to={{ opacity: 1, top: '51%' }}
                           >
-                            <img src={herePicture} style={{ width: '12.5%', marginLeft: '11%' }}/>
+                            <img src={herePicture} alt="sherpon-picture-here" style={{ width: '12.5%', marginLeft: '11%' }}/>
                           </Tween>
                           <Tween
                               from={{ opacity: 0, top: '-60%' }}
                               to={{ opacity: 1, top: '44%' }}
                           >
-                            <img src={takeOffPicture} style={{ width: '23.5%', marginLeft: '11%' }}/>
+                            <img src={takeOffPicture} alt="sherpon-picture-take-off" style={{ width: '23.5%', marginLeft: '11%' }}/>
                           </Tween>
                           <Tween
                               from={{ opacity: 0, top: '-60%' }}
                               to={{ opacity: 1, top: '36.5%' }}
                           >
-                            <img src={ideaPicture} style={{ width: '12%', marginLeft: '11%' }}/>
+                            <img src={ideaPicture} alt="sherpon-picture-idea" style={{ width: '12%', marginLeft: '11%' }}/>
                           </Tween>
                           <Tween
                               from={{ opacity: 0, top: '-60%' }}
                               to={{ opacity: 1, top: '29.6348%' }}
                           >
-                            <img src={yourPicture} style={{ width: '15%', marginLeft: '10.5%' }}/>
+                            <img src={yourPicture} alt="sherpon-picture-your" style={{ width: '15%', marginLeft: '10.5%' }}/>
                           </Tween>
                           <Tween
                               from={{ opacity: 0, top: '-60%' }}
                               to={{ opacity: 1, top: '6.6348%' }}
                           >
-                            <img src={ideaComPicture} style={{ width: '15%', marginLeft: '10.5%' }}/>
+                            <img src={ideaComPicture} alt="sherpon-picture-logo" style={{ width: '15%', marginLeft: '10.5%' }}/>
                           </Tween>
                           <Tween
                               from={{ opacity: 0, top: '160%' }}
                               to={{ opacity: 1, top: '62.6348%' }}
                           >
-                            <img src={buttonPicture} style={{ width: '29.5%', marginLeft: '10.5%' }}/>
+                            <img src={buttonPicture} alt="sherpon-picture-button" style={{ width: '29.5%', marginLeft: '10.5%' }}/>
                           </Tween>
                         </Timeline>
                       </div>

@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 // let FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const webpack = require('webpack');
 const Dotenv = require('dotenv-webpack');
@@ -15,8 +16,8 @@ module.exports = (env) => {
     output: {
       path: path.join(__dirname, 'dist'),
       publicPath: '/',  // https://webpack.js.org/guides/public-path/
-      filename: '[name].bundle.js',
-      chunkFilename: '[name].bundle.js',
+      filename: '[name].bundle.[hash:4].js',
+      chunkFilename: '[name].bundle.[hash:4].js',
     },
     module: {
       rules:[{
@@ -42,7 +43,7 @@ module.exports = (env) => {
           'sass-loader'
         ]
       },{
-        test: /\.(png|jpe?g|ico|svg)$/,
+        test: /\.(png|jpe?g|ico|svg|webp)$/,
         use: [
           {
             loader: 'url-loader',
@@ -69,7 +70,8 @@ module.exports = (env) => {
         favicon: "./src/images/favicon.png"
       }),
       new MiniCssExtractPlugin({
-        filename: 'bundle.css'
+        filename: '[name].bundle.[hash:4].css',
+        chunkFilename: '[name].bundle.[hash:4].css',
       }),
       new Dotenv({
         path: env.ENV_FILE_PATH, // load this now instead of the ones in '.env'
@@ -79,6 +81,9 @@ module.exports = (env) => {
         defaults: false // load '.env.defaults' as the default values if empty.
       }),
       new webpack.EnvironmentPlugin({}),
+      new CopyPlugin([
+        { from: './src/robots.txt', to: './' },
+      ]),
       /* new FaviconsWebpackPlugin({
         // Your source logo
         logo: './src/images/favicon.png',
