@@ -1,0 +1,16 @@
+.drag-and-drop-container-section {
+
+}
+
+.drag-and-drop-section {
+  padding: 6rem 4rem 4rem 4rem;
+  height: 100vh;
+
+  @media(min-width: 750px) {
+    padding: 6rem;
+  }
+
+  @media(min-width: 1200px) {
+    padding: 12rem;
+  }
+}

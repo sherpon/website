@@ -1,5 +1,5 @@
 /** libs */
-import React from 'react';
+import React, { Suspense } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
@@ -12,9 +12,16 @@ import PropTypes from 'prop-types';
 /** components */
 /** containers */
 import Hero from './sections/hero';
+const DragAndDrop = React.lazy(() => import( /* webpackChunkName: "drag-and-drop-section" */ './sections/dragAndDrop'));
 /** styles */
 /** files */
 /** strings */
+
+const SpinnerPage = () => {
+  return(
+    <div>loading</div>
+  );
+};
 
 /**
  * Home container
@@ -29,6 +36,9 @@ class HomeContainer extends React.Component {
     return(
       <div className="home-container-page">
         <Hero/>
+        <Suspense fallback={<SpinnerPage/>}>
+          <DragAndDrop/>
+        </Suspense>
       </div>
     );
   }
