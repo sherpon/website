@@ -19,7 +19,7 @@ const Hero = ({children, strings}) => {
     <div id="hero-section" className="hero-section">
       <div className="hero-section__hero">
         <div className="hero-section__hero__logo">
-          <img src={isotype}/>
+          <img src={isotype} alt='Sherpon logo'/>
           <div>Sherpon</div>
         </div>
         <div className="hero-section__hero__title">

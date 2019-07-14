@@ -53,7 +53,6 @@ const App = () => {
           <Route exact path="/" component={Home} />
         </Switch>
       </BrowserRouter>
-      <Language/>
     </Provider>
   )
 };
@@ -64,3 +63,5 @@ render(
   <App/>,
   document.getElementById('app')
 )
+
+// <Language/>
