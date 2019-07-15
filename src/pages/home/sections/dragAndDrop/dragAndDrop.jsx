@@ -25,14 +25,14 @@ const DragAndDrop = ({
     <div className="drag-and-drop-section">
       <div className="drag-and-drop-section__message">
         <div className="drag-and-drop-section__message__title">
-          {'Drag & Drop'}
+          {strings.title}
         </div>
         <div className="drag-and-drop-section__message__description">
-          {'Just put elements in your website or take them out. No coding required.'}
+          {strings.description}
         </div>
         <div className="drag-and-drop-section__message__action">
           <div className="drag-and-drop-section__message__action__title">
-            {'Try it. Move the Rabbit over the field. (Desktop only)'}
+            {strings.action}
           </div>
           <div className="drag-and-drop-section__message__action__rabbit">
             <img 

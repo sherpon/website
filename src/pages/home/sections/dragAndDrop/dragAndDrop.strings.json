@@ -1,4 +1,12 @@
 {
-  "EN": {},
-  "ES": {}
+  "EN": {
+    "title":"Drag & Drop",
+    "description":"Just put elements in your website or take them out. No coding required.",
+    "action":"Try it. Move the Rabbit over the field. (Desktop only)"
+  },
+  "ES": {
+    "title":"Arrastra y suelta",
+    "description":"Simplemente pon elementos en tu sitio web o sácalos. No necesita programación.",
+    "action":"Inténtalo. Mueve el conejo sobre el paisaje. (Sólo para PC)"
+  }
 }
