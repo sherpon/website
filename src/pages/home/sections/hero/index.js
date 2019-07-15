@@ -39,82 +39,85 @@ class HeroContainer extends React.Component {
     const {language} = this.props;
     return(
       <div className="hero-container-section">
-        <Controller>
-          <Scene
-            triggerHook="onLeave"
-            duration={5000}
-            pin={'#hero-section'}
-          >
-            {(progress) => (
-              <Hero
-                strings={strings[language]}
+        <div id="hero-container-section-controller" className="hero-container-section-controller">
+          <div id="hero-container-section_scene" className="hero-container-section_scene">
+            <Controller>
+              <Scene
+                triggerHook="onLeave"
+                duration={5000}
+                pin={'#hero-container-section_scene'}
               >
-                <Timeline 
-                  totalProgress={progress} 
-                  paused
-                  target={
-                    <div className="animation__editor">
-                      <div className="animation__editor__wrapper">
-                        <Timeline totalProgress={progress} paused>
-                          <Tween
-                              from={{ opacity: 0, right: '-110%' }}
-                              to={{ opacity: 1, right: '0%' }}
-                          >
-                            <img src={airportNightPicture} alt="sherpon-airport-night" style={{ width: '100%' }}/>
-                          </Tween>
-                          <Tween
-                              from={{ opacity: 0, top: '-60%' }}
-                              to={{ opacity: 1, top: '51%' }}
-                          >
-                            <img src={herePicture} alt="sherpon-picture-here" style={{ width: '12.5%', marginLeft: '11%' }}/>
-                          </Tween>
-                          <Tween
-                              from={{ opacity: 0, top: '-60%' }}
-                              to={{ opacity: 1, top: '44%' }}
-                          >
-                            <img src={takeOffPicture} alt="sherpon-picture-take-off" style={{ width: '23.5%', marginLeft: '11%' }}/>
-                          </Tween>
-                          <Tween
-                              from={{ opacity: 0, top: '-60%' }}
-                              to={{ opacity: 1, top: '36.5%' }}
-                          >
-                            <img src={ideaPicture} alt="sherpon-picture-idea" style={{ width: '12%', marginLeft: '11%' }}/>
-                          </Tween>
-                          <Tween
-                              from={{ opacity: 0, top: '-60%' }}
-                              to={{ opacity: 1, top: '29.6348%' }}
-                          >
-                            <img src={yourPicture} alt="sherpon-picture-your" style={{ width: '15%', marginLeft: '10.5%' }}/>
-                          </Tween>
-                          <Tween
-                              from={{ opacity: 0, top: '-60%' }}
-                              to={{ opacity: 1, top: '6.6348%' }}
-                          >
-                            <img src={ideaComPicture} alt="sherpon-picture-logo" style={{ width: '15%', marginLeft: '10.5%' }}/>
-                          </Tween>
-                          <Tween
-                              from={{ opacity: 0, top: '160%' }}
-                              to={{ opacity: 1, top: '62.6348%' }}
-                          >
-                            <img src={buttonPicture} alt="sherpon-picture-button" style={{ width: '29.5%', marginLeft: '10.5%' }}/>
-                          </Tween>
-                        </Timeline>
-                      </div>
-                    </div>
-                  }
-                >
-                  <Tween
-                    duration={7}
-                  />
-                  <Tween
-                    to={{css: { transform: 'rotateY(0deg) rotateX(0deg)' }}}
-                  />
-                </Timeline>
-              </Hero>
-            )}
-          </Scene>
-        </Controller>
-        
+                {(progress) => (
+                  <Hero
+                    strings={strings[language]}
+                  >
+                    <Timeline 
+                      totalProgress={progress} 
+                      paused
+                      target={
+                        <div className="animation__editor">
+                          <div className="animation__editor__wrapper">
+                            <Timeline totalProgress={progress} paused>
+                              <Tween
+                                  from={{ opacity: 0, right: '-110%' }}
+                                  to={{ opacity: 1, right: '0%' }}
+                              >
+                                <img src={airportNightPicture} alt="sherpon-airport-night" style={{ width: '100%' }}/>
+                              </Tween>
+                              <Tween
+                                  from={{ opacity: 0, top: '-60%' }}
+                                  to={{ opacity: 1, top: '51%' }}
+                              >
+                                <img src={herePicture} alt="sherpon-picture-here" style={{ width: '12.5%', marginLeft: '11%' }}/>
+                              </Tween>
+                              <Tween
+                                  from={{ opacity: 0, top: '-60%' }}
+                                  to={{ opacity: 1, top: '44%' }}
+                              >
+                                <img src={takeOffPicture} alt="sherpon-picture-take-off" style={{ width: '23.5%', marginLeft: '11%' }}/>
+                              </Tween>
+                              <Tween
+                                  from={{ opacity: 0, top: '-60%' }}
+                                  to={{ opacity: 1, top: '36.5%' }}
+                              >
+                                <img src={ideaPicture} alt="sherpon-picture-idea" style={{ width: '12%', marginLeft: '11%' }}/>
+                              </Tween>
+                              <Tween
+                                  from={{ opacity: 0, top: '-60%' }}
+                                  to={{ opacity: 1, top: '29.6348%' }}
+                              >
+                                <img src={yourPicture} alt="sherpon-picture-your" style={{ width: '15%', marginLeft: '10.5%' }}/>
+                              </Tween>
+                              <Tween
+                                  from={{ opacity: 0, top: '-60%' }}
+                                  to={{ opacity: 1, top: '6.6348%' }}
+                              >
+                                <img src={ideaComPicture} alt="sherpon-picture-logo" style={{ width: '15%', marginLeft: '10.5%' }}/>
+                              </Tween>
+                              <Tween
+                                  from={{ opacity: 0, top: '160%' }}
+                                  to={{ opacity: 1, top: '62.6348%' }}
+                              >
+                                <img src={buttonPicture} alt="sherpon-picture-button" style={{ width: '29.5%', marginLeft: '10.5%' }}/>
+                              </Tween>
+                            </Timeline>
+                          </div>
+                        </div>
+                      }
+                    >
+                      <Tween
+                        duration={7}
+                      />
+                      <Tween
+                        to={{css: { transform: 'rotateY(0deg) rotateX(0deg)' }}}
+                      />
+                    </Timeline>
+                  </Hero>
+                )}
+              </Scene>
+            </Controller>
+          </div>
+        </div>
       </div>
     );
   }
