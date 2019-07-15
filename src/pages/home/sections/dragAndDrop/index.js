@@ -21,7 +21,7 @@ const CheckOverlay = ({strings, checked}) => {
   const isChecked = (checked) ? ('checked') : ('');
   return(
     <div className={`check-overlay ${isChecked}`}>
-      <img className="check-overlay__check" src={checkPicture}/>
+      <img className="check-overlay__check" src={checkPicture} alt="sherpon checked overlay"/>
       <div className="check-overlay__message">
         {'See? It’s easy, right!'}
       </div>
