@@ -24,6 +24,7 @@ const CheckOverlay = ({strings, checked}) => {
       <img className="check-overlay__check" src={checkPicture} alt="sherpon checked overlay"/>
       <div className="check-overlay__message">
         {'See? It’s easy, right!'}
+        <p>{'Create your website with Sherpon is easy too.'}</p>
       </div>
     </div>
   );

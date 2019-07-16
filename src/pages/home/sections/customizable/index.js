@@ -30,10 +30,10 @@ const CustomizableContainer = ({language}) => {
   const [showColorColorPicker, setShowColorColorPicker] = useState(false);
   const [showBackgroundColorPicker, setShowBackgroundColorPicker] = useState(false);
   const [stylePanel, setStylePanel] = useState({
-                                              color: '#4D4D4D',
+                                              color: '#FFFFFF',
                                               fontSize: '25px',
                                               textAlign: 'left',
-                                              backgroundColor: '#F473B3',
+                                              backgroundColor: '#766AFA',
                                             });
 
   return(
