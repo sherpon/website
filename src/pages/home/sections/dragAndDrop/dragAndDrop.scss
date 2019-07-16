@@ -1,5 +1,6 @@
 .drag-and-drop-container-section {
   position: relative;
+  overflow-x: hidden;
 
   .check-overlay {
     position: absolute;

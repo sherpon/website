@@ -13,6 +13,7 @@ import PropTypes from 'prop-types';
 /** containers */
 import Hero from './sections/hero';
 const DragAndDrop = React.lazy(() => import( /* webpackChunkName: "drag-and-drop-section" */ './sections/dragAndDrop'));
+const Customizable = React.lazy(() => import( /* webpackChunkName: "customizable-section" */ './sections/customizable'));
 /** styles */
 /** files */
 /** strings */
@@ -38,6 +39,7 @@ class HomeContainer extends React.Component {
         <Hero/>
         <Suspense fallback={<SpinnerPage/>}>
           <DragAndDrop/>
+          <Customizable/>
         </Suspense>
       </div>
     );
