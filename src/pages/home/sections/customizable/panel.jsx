@@ -30,9 +30,14 @@ const Panel = ({
       <div className="panel-customizable-section__box">
         <div className="panel-customizable-section__box__wrapper">
           <div className="panel-customizable-section__box__input">
-            <label>Color</label>
+            <label htmlFor="panel__color">Color</label>
             <div className="input">
-              <div className="color" style={{ backgroundColor: stylePanel.color }} onClick={ (event) => setShowColorColorPicker(true) }></div>
+              <div 
+                id="panel__color"
+                className="color" 
+                style={{ backgroundColor: stylePanel.color }} 
+                onClick={ (event) => setShowColorColorPicker(true) }
+              ></div>
               <div className="color-text" onClick={ (event) => setShowColorColorPicker(true) }>
                 {stylePanel.color}
               </div>
@@ -61,9 +66,9 @@ const Panel = ({
             </div>
           </div>
           <div className="panel-customizable-section__box__input">
-            <label>Size</label>
+            <label htmlFor="panel__size">Size</label>
             <div className="input">
-              <select value={stylePanel.fontSize} onChange={(event) => setStylePanel({...stylePanel, fontSize: event.target.value})}>
+              <select id="panel__size" value={stylePanel.fontSize} onChange={(event) => setStylePanel({...stylePanel, fontSize: event.target.value})}>
                 <option value="8px">8px</option>
                 <option value="15px">15px</option>
                 <option value="18px">18px</option>
@@ -74,9 +79,9 @@ const Panel = ({
             </div>
           </div>
           <div className="panel-customizable-section__box__input">
-            <label>Alignment</label>
+            <label htmlFor="panel__align">Alignment</label>
             <div className="input">
-              <select value={stylePanel.textAlign} onChange={(event) => setStylePanel({...stylePanel, textAlign: event.target.value})}>
+              <select id="panel__align" value={stylePanel.textAlign} onChange={(event) => setStylePanel({...stylePanel, textAlign: event.target.value})}>
                 <option value="left">left</option>
                 <option value="center">center</option>
                 <option value="right">right</option>
@@ -84,9 +89,14 @@ const Panel = ({
             </div>
           </div>
           <div className="panel-customizable-section__box__input">
-            <label>Background</label>
+            <label htmlFor="panel__background" >Background</label>
             <div className="input">
-              <div className="color" style={{ backgroundColor: stylePanel.backgroundColor }} onClick={ (event) => setShowBackgroundColorPicker(true) }></div>
+              <div 
+                id="panel__background" 
+                className="color" 
+                style={{ backgroundColor: stylePanel.backgroundColor }} 
+                onClick={ (event) => setShowBackgroundColorPicker(true) }
+              ></div>
               <div className="color-text" onClick={ (event) => setShowBackgroundColorPicker(true) }>
                 {stylePanel.backgroundColor}
               </div>
