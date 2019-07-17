@@ -44,7 +44,7 @@ class HeroContainer extends React.Component {
             <Controller>
               <Scene
                 triggerHook="onLeave"
-                duration={5000}
+                duration={2000}
                 pin={'#hero-container-section_scene'}
               >
                 {(progress) => (
