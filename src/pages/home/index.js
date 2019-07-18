@@ -15,6 +15,7 @@ import Hero from './sections/hero';
 const DragAndDrop = React.lazy(() => import( /* webpackChunkName: "drag-and-drop-section" */ './sections/dragAndDrop'));
 const Customizable = React.lazy(() => import( /* webpackChunkName: "customizable-section" */ './sections/customizable'));
 const Code = React.lazy(() => import( /* webpackChunkName: "code-section" */ './sections/code'));
+const Cta = React.lazy(() => import( /* webpackChunkName: "cta-section" */ './sections/cta'));
 /** styles */
 /** files */
 /** strings */
@@ -42,6 +43,7 @@ class HomeContainer extends React.Component {
           <DragAndDrop/>
           <Customizable/>
           <Code/>
+          <Cta/>
         </Suspense>
       </div>
     );

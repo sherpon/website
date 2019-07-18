@@ -117,7 +117,7 @@ const Panel = ({
                     />
                     <ChromePicker 
                       disableAlpha={true}
-                      color={ stylePanel.color } 
+                      color={ stylePanel.backgroundColor } 
                       onChange={(color) => setStylePanel({...stylePanel, backgroundColor: color.hex})} />
                   </div>
                 ) : ( null ) 
