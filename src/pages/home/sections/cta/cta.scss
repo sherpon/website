@@ -11,13 +11,17 @@
   width: 100%;
 }
 
+.cta-container-section__wrapper__perspective {
+  transform: rotateZ(-40deg);
+}
+
 .cta-container-section__wrapper__animation {
   width: 100%;
   position: absolute;
 }
 
 .cta-section {
-  padding: 6rem 4rem 4rem 4rem;
+  padding: 6rem 4rem 0rem 4rem;
   height: calc(100vh - 8rem);
   display: grid;
   grid-template-columns: 100%;
