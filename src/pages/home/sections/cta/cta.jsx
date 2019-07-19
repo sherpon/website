@@ -22,9 +22,11 @@ const Cta = ({children, strings}) => {
         </div>
         <div className="cta-section__message__description">
           <div className="cta-button-container">
+            <a href={process.env.ADMIN_URL_ENDPOINT}>
             <div className="cta-button">
               {strings.button}
             </div>
+            </a>
           </div>
         </div>
       </div>
