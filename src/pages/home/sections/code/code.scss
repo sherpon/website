@@ -1,0 +1,76 @@
+.code-section {
+  padding: 6rem 4rem 4rem 4rem;
+  height: calc(100vh - 8rem);
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+    "message"
+    "activity";
+
+  @media(min-width: 750px) {
+    padding: 6rem;
+    height: calc(100vh - 12rem);
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "message activity";
+  }
+
+  @media(min-width: 1200px) {
+    padding: 12rem;
+    height: calc(100vh - 24rem);
+  }
+
+  &__message {
+    grid-area: message;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    @media(min-width: 750px) {
+      padding: 0rem 5rem 0rem 5rem;
+    }
+
+    @media(min-width: 1200px) {
+      padding: 0rem 5rem 0rem 5rem;
+    }
+
+    &__title {
+      font-family: Ubuntu;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 29px;
+      /* identical to box height */
+      letter-spacing: -0.01em;
+      margin-bottom: 2rem;
+    }
+
+    &__description {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 25px;
+      letter-spacing: -0.01em;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__action {
+    grid-area: activity;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > img {
+      width: 100%;
+
+      @media(min-width: 1200px) {
+        width: 60%;
+      }
+    }
+  }
+}

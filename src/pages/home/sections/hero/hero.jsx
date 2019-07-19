@@ -30,9 +30,11 @@ const Hero = ({children, strings}) => {
         </div>
         <div className="hero-section__hero__action">
           <div className="hero-button-container">
+            <a href={process.env.ADMIN_URL_ENDPOINT}>
             <div className="hero-button">
               {strings.signupButton}
             </div>
+            </a>
           </div>
         </div>
       </div>
